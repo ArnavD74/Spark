@@ -14,7 +14,7 @@
     <meta name="generator" content="Jekyll v3.8.5" />
     <title>Spark</title>
 
-    <link rel="stylesheet" href="quiz.css" />
+    <link rel="stylesheet" href="css/quiz.css" />
 
     <!-- Bootstrap core CSS -->
     <link
@@ -40,8 +40,6 @@
         }
       }
     </style>
-    <!-- Custom styles for this template -->
-    <link href="cover.css" rel="stylesheet" />
   </head>
   <body class="text-center" onload="initialize();">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
@@ -59,10 +57,10 @@
       <main role="main" class="inner cover">
         <p id="question"></p>
         <div class="buttons">
-          <button id="button1" type="button" class="btn btn-dark"><span class="choice1"></span></button>
-          <button id="button2" type="button" class="btn btn-dark"><span class="choice2"></span></button>
-          <button id="button3" type="button" class="btn btn-dark"><span class="choice3"></span></button>
-          <button id="button4" type="button" class="btn btn-dark"><span class="choice4"></span></button>
+          <button id="button1" type="button" class="btn btn-dark"><span id="choice1"></span></button>
+          <button id="button2" type="button" class="btn btn-dark"><span id="choice2"></span></button>
+          <button id="button3" type="button" class="btn btn-dark"><span id="choice3"></span></button>
+          <button id="button4" type="button" class="btn btn-dark"><span id="choice4"></span></button>
         </div>
         <p class="lead">Question x of y</p>
       </main>
@@ -76,8 +74,8 @@
       </footer>
     </div>
 
-    <script src="application.js"></script>
-    <script src="question.js"></script>
-    <script src="controller.js"></script>
+    <script src="js/question.js"></script>
+    <script src="js/application.js"></script>
+    <script src="js/controller.js"></script>
   </body>
 </html>
