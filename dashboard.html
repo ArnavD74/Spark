@@ -66,10 +66,9 @@
     <script src="js/aosinit.js"></script>
 
     <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-
-      
-      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Spark</a>
-      
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="dashboard.html"
+        >Spark</a
+      >
       <input
         class="form-control form-control-dark w-100"
         type="text"
@@ -78,7 +77,7 @@
       />
       <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
-          <a class="nav-link" href="#">Sign out</a>
+          <a class="nav-link" href="index.html">Sign out</a>
         </li>
       </ul>
     </nav>
@@ -118,12 +117,6 @@
                   Notifications
                 </a>
               </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="notifications.html">
-                    <span data-feather="bar-chart-2"></span>
-                    <div id="txt"></div>
-                  </a>
-                </li>
             </ul>
           </div>
         </nav>
@@ -141,13 +134,7 @@
           </div>
 
           <div data-aos="fade-up" data-aos-duration="2500" class="progressbars">
-            <div class="form-group">
-              <label for="exampleFormControlSelect1">Gender</label>
-              <select class="form-control" id="exampleFormControlSelect1">
-                <option>Male</option>
-                <option>Female</option>
-              </select>
-            </div>
+            <h1 id="greeting" style="margin-bottom: 2rem;">Hello</h1>
             <div class="progress">
               <div
                 class="progress-bar"
@@ -287,6 +274,10 @@
           ></canvas> -->
         </main>
       </div>
+      <script>
+        document.getElementById("greeting").innerHTML =
+          "Hello, " + localStorage.getItem("name");
+      </script>
     </div>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

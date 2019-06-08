@@ -47,7 +47,9 @@
     <script src = "js/inputfoods.js"></script>
 
     <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Spark</a>
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="dashboard.html"
+        >Spark</a
+      >
       <input
         class="form-control form-control-dark w-100"
         type="text"
@@ -56,7 +58,7 @@
       />
       <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
-          <a class="nav-link" href="#">Sign out</a>
+          <a class="nav-link" href="index.html">Sign out</a>
         </li>
       </ul>
     </nav>
@@ -126,6 +128,15 @@
               </div>
             </div>
 
+          <div data-aos="fade-up" data-aos-duration="2500">
+            <h1 id="greeting" style="margin-bottom: 2rem;">Hello</h1>
+          </div>
+        </main>
+      </div>
+      <script>
+          document.getElementById("greeting").innerHTML =
+            "Hello, " + localStorage.getItem("name");
+        </script>
             <div data-aos="fade-up" data-aos-duration="2500" id = "mentallyNotOkay">
                 Enter Item: <br>
               <input type = "text" name = "firstName" id = "myText">  
