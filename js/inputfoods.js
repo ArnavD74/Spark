@@ -32,14 +32,8 @@ function getData() {
       protein = obj.hits[0].fields.nf_protein;
     });
 
-  If(day == 1); {
-  document.getElementById("r1").innerHTML = "Calories: " + calories1;
-  }
-  If(day == 2); {
-    document.getElementById("r1").innerHTML = "Calories: " + calories2;
-  }
 
-
+  document.getElementById("r1").innerHTML = "Calories: " + calories;}
   document.getElementById("r2").innerHTML = "Total Fat: " + totalFat;
   document.getElementById("r3").innerHTML = "Saturated Fat: " + saturatedFat;
   document.getElementById("r4").innerHTML = "Cholesterol: " + cholesterol;
