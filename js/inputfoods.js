@@ -7,21 +7,24 @@ var totalCarbohydrates;
 var dietaryFiber;
 var sugars;
 var protein;
+var calories1;
+var calories2;
 
 function getData() {
   var foodName = document.getElementById("myText").value;
 
   fetch(
     "https://api.nutritionix.com/v1_1/search/" +
-    foodName +
-    "?results=0:20&fields=item_name,brand_name,item_id,nf_calories,nf_total_fat,nf_saturated_fat,nf_trans_fatty_acid,nf_cholesterol,nf_sodium,nf_total_carbohydrate,nf_dietary_fiber,nf_sugars,nf_protein&appId=62c73137&appKey=25bf33dc3657fea53a11d052cc75c79e"
+      foodName +
+      "?results=0:20&fields=item_name,brand_name,item_id,nf_calories,nf_total_fat,nf_saturated_fat,nf_trans_fatty_acid,nf_cholesterol,nf_sodium,nf_total_carbohydrate,nf_dietary_fiber,nf_sugars,nf_protein&appId=62c73137&appKey=25bf33dc3657fea53a11d052cc75c79e"
   )
-    .then(function (response) {
+    .then(function(response) {
       return response.json();
     })
-    .then(function (myJson) {
+    .then(function(myJson) {
       let obj = myJson;
-      calories = obj.hits[0].fields.nf_calories;
+      calories1 = obj.hits[0].fields.nf_calories;
+      calories2 = obj.hits[0].fields.nf_calories;
       totalFat = obj.hits[0].fields.nf_total_fat;
       saturatedFat = obj.hits[0].fields.nf_saturated_fat;
       cholesterol = obj.hits[0].fields.nf_cholesterol;
@@ -32,13 +35,14 @@ function getData() {
       protein = obj.hits[0].fields.nf_protein;
     });
 
-  If(day == 1); {
-  document.getElementById("r1").innerHTML = "Calories: " + calories1;
+  if (localStorage.getItem("day") == 1);
+  {
+    document.getElementById("r1").innerHTML = "Calories: " + calories1;
   }
-  If(day == 2); {
+  if (localStorage.getItem("day") == 2);
+  {
     document.getElementById("r1").innerHTML = "Calories: " + calories2;
   }
-
 
   document.getElementById("r2").innerHTML = "Total Fat: " + totalFat;
   document.getElementById("r3").innerHTML = "Saturated Fat: " + saturatedFat;
@@ -50,17 +54,11 @@ function getData() {
   document.getElementById("r8").innerHTML = "Sugars: " + sugars;
   document.getElementById("r9").innerHTML = "Protein: " + protein;
 
-
-  if (day == 1);
-  localStorage.setItem("calories", localStorage.getItem("calories") + calories);
-
-
-
   localStorage.setItem("totalfat", localStorage.getItem("totalfat") + totalFat);
   localStorage.setItem(
     "saturatedfat",
     localStorage.getItem("saturatedfat") + saturatedFat
-);
+  );
   localStorage.setItem(
     "cholesterol",
     localStorage.getItem("cholesterol") + cholesterol

@@ -29,6 +29,35 @@ function goToDashboard() {
     localStorage.getItem("magnesium")
   ];
 
+  var valuesLength = values.length;
+  var max = Math.max(parseInt(values[i]));
+  var highest = 0;
+
+  for (var i = 0; i < valuesLength; i++) {
+    if (max == parseInt(values[i])) {
+      highest = i;
+    }
+  }
+
+  if (highest == 1) {
+  }
+  if (highest == 1) {
+  }
+  if (highest == 1) {
+  }
+  if (highest == 1) {
+  }
+  if (highest == 1) {
+  }
+  if (highest == 1) {
+  }
+  if (highest == 1) {
+  }
+  if (highest == 1) {
+  }
+  if (highest == 1) {
+  }
+
   localStorage.setItem("day", 6);
   window.location.href = "loading.html";
 }
