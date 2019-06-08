@@ -23,6 +23,37 @@ var vitaminB12;
 function getData() {
   var foodName = document.getElementById("myText").value;
 
+  // const Http = new XMLHttpRequest();
+  // const url =
+  //   "https://api.nutritionix.com/v1_1/search/" +
+  //   foodName +
+  //   "?results=0:20&fields=item_name,brand_name,item_id,nf_calories,nf_total_fat,nf_saturated_fat,nf_trans_fatty_acid,nf_cholesterol,nf_sodium,nf_total_carbohydrate,nf_dietary_fiber,nf_sugars,nf_protein&appId=62c73137&appKey=25bf33dc3657fea53a11d052cc75c79e";
+  // Http.open("GET", url);
+  // Http.send();
+
+  // Http.onreadystatechange = e => {
+  //   var obj = JSON.parse(Http.responseText);
+  // };
+
+  fetch(
+    "https://api.nutritionix.com/v1_1/search/" +
+      foodName +
+      "?results=0:20&fields=item_name,brand_name,item_id,nf_calories,nf_total_fat,nf_saturated_fat,nf_trans_fatty_acid,nf_cholesterol,nf_sodium,nf_total_carbohydrate,nf_dietary_fiber,nf_sugars,nf_protein&appId=62c73137&appKey=25bf33dc3657fea53a11d052cc75c79e"
+  )
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(myJson) {
+      console.log(
+        JSON.stringify(myJson).substring(
+          JSON.stringify(myJson).indexOf("nf_calories"),
+          JSON.stringify(myJson).indexOf("nf_calories") + 20
+        )
+      );
+    });
+
+  console.log(obj.total_hits);
+
   if (foodName == "Apple") {
     calories = 95;
     totalFat = 0.3;
