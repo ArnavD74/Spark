@@ -46,7 +46,7 @@
     <script src="js/aosinit.js"></script>
 
     <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Spark</a>
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="dashboard.html">Spark</a>
       <input
         class="form-control form-control-dark w-100"
         type="text"
@@ -55,7 +55,7 @@
       />
       <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
-          <a class="nav-link" href="#">Sign out</a>
+          <a class="nav-link" href="index.html">Sign out</a>
         </li>
       </ul>
     </nav>
@@ -100,21 +100,25 @@
         </nav>
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-            <div
-              data-aos="fade-up"
-              data-aos-duration="2000"
-              class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
-            >
-              <h1 class="h2">Dashboard</h1>
-              <div class="btn-toolbar mb-2 mb-md-0">
-                
-              </div>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="2000"
+            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+          >
+            <h1 class="h2">Dashboard</h1>
+            <div class="btn-toolbar mb-2 mb-md-0">
+              
             </div>
+          </div>
 
-            <div data-aos="fade-up" data-aos-duration="2500">
-            <h1>Hello</h1>
-            </div>
+          <div data-aos="fade-up" data-aos-duration="2500">
+              <h1 id="greeting" style="margin-bottom: 2rem;">Hello</h1>
+          </div>
       </div>
+      <script>
+          document.getElementById("greeting").innerHTML =
+            "Hello, " + localStorage.getItem("name");
+        </script>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>

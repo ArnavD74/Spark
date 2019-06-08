@@ -46,7 +46,9 @@
     <script src="js/aosinit.js"></script>
 
     <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Spark</a>
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="dashboard.html"
+        >Spark</a
+      >
       <input
         class="form-control form-control-dark w-100"
         type="text"
@@ -55,7 +57,7 @@
       />
       <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
-          <a class="nav-link" href="#">Sign out</a>
+          <a class="nav-link" href="index.html">Sign out</a>
         </li>
       </ul>
     </nav>
@@ -109,6 +111,7 @@
           </div>
 
           <div data-aos="fade-up" data-aos-duration="2500">
+            <h1 id="greeting" style="margin-bottom: 2rem;">Hello</h1>
             <div class="card-group">
               <div class="card">
                 <img
@@ -123,9 +126,6 @@
                     lead-in to additional content. This content is a little bit
                     longer.
                   </p>
-                  <p class="card-text">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                  </p>
                 </div>
               </div>
               <div class="card">
@@ -139,9 +139,6 @@
                   <p class="card-text">
                     This card has supporting text below as a natural lead-in to
                     additional content.
-                  </p>
-                  <p class="card-text">
-                    <small class="text-muted">Last updated 3 mins ago</small>
                   </p>
                 </div>
               </div>
@@ -158,9 +155,6 @@
                     lead-in to additional content. This card has even longer
                     content than the first to show that equal height action.
                   </p>
-                  <p class="card-text">
-                    <small class="text-muted">Last updated 3 mins ago</small>
-                  </p>
                 </div>
               </div>
             </div>
@@ -173,6 +167,10 @@
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"
     ></script>
+    <script>
+      document.getElementById("greeting").innerHTML =
+        "Hello, " + localStorage.getItem("name");
+    </script>
     <script>
       window.jQuery ||
         document.write(

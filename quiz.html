@@ -41,7 +41,7 @@
       }
     </style>
   </head>
-  <body class="text-center" onload="initialize();">
+  <body class="text-center">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
       <header class="masthead mb-auto">
         <div class="inner">
@@ -55,14 +55,17 @@
       </header>
 
       <main role="main" class="inner cover">
-        <p id="question"></p>
+        <h3 id="question" style="margin-bottom: 2rem;">What is your name?</h3>
+        <input id="name" class="form-control form-control-dark w-100" type="text" placeholder="Name" aria-label="Name" style="margin-bottom: 2rem;">
+        <button id="submit" type="button" class="btn btn-dark" onclick="initialize();"><span id="submit">Submit</span></button>
         <div class="buttons">
-          <button id="button1" type="button" class="btn btn-dark"><span id="choice1"></span></button>
-          <button id="button2" type="button" class="btn btn-dark"><span id="choice2"></span></button>
-          <button id="button3" type="button" class="btn btn-dark"><span id="choice3"></span></button>
-          <button id="button4" type="button" class="btn btn-dark"><span id="choice4"></span></button>
+          <button id="button1" type="button" class="btn btn-dark" style="visibility: hidden;"><span id="choice1"></span></button>
+          <button id="button2" type="button" class="btn btn-dark" style="visibility: hidden"><span id="choice2"></span></button>
+          <button id="button3" type="button" class="btn btn-dark" style="visibility: hidden"><span id="choice3"></span></button>
+          <button id="button4" type="button" class="btn btn-dark" style="visibility: hidden"><span id="choice4"></span></button>
+          <button id="button5" type="button" class="btn btn-dark" style="visibility: hidden"><span id="choice5"></span></button>
         </div>
-        <p id="progress" class="lead">Question x of y</p>
+        <p id="progress" class="lead">Question 1 of SOMETHING CHANGE THIS</p>
       </main>
 
       <footer class="mastfoot mt-auto">
