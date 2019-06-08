@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -12,7 +12,7 @@
       content="Tushar Muralidharan, Harrison Wiseblatt, Arnav Dashaputra"
     />
     <meta name="generator" content="Jekyll v3.8.5" />
-    <title>Dashboard</title>
+    <title>Glucose</title>
 
     <link
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -44,12 +44,9 @@
   <body>
     <script src="js/aos.js"></script>
     <script src="js/aosinit.js"></script>
-    <script src = "js/inputfoods.js"></script>
 
     <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="dashboard.html"
-        >Spark</a
-      >
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Spark</a>
       <input
         class="form-control form-control-dark w-100"
         type="text"
@@ -58,7 +55,7 @@
       />
       <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
-          <a class="nav-link" href="index.html">Sign out</a>
+          <a class="nav-link" href="#">Sign out</a>
         </li>
       </ul>
     </nav>
@@ -81,15 +78,15 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="inputfood.html">
+                <a class="nav-link" href="inputfood.html">
                   <span data-feather="shopping-cart"></span>
-                  New Food Intake <span class="sr-only">(current)</span>
+                  New Food Intake
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="actions.html">
+                <a class="nav-link active" href="actions.html">
                   <span data-feather="users"></span>
-                  Dietary Issues
+                  Actions <span class="sr-only">(current)</span>
                 </a>
               </li>
               <li class="nav-item">
@@ -103,73 +100,27 @@
         </nav>
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-            <div
-              data-aos="fade-up"
-              data-aos-duration="2000"
-              class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
-            >
-              <h1 class="h2">Dashboard</h1>
-              <div class="btn-toolbar mb-2 mb-md-0">
-                <div class="btn-group mr-2">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">
-                    Share
-                  </button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">
-                    Export
-                  </button>
-                </div>
-                <button
-                  type="button"
-                  class="btn btn-sm btn-outline-secondary dropdown-toggle"
-                >
-                  <span data-feather="calendar"></span>
-                  This week
-                </button>
-              </div>
-            </div>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="2000"
+            class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+          >
+            <h1 class="h2">Total Fat</h1>
+            <div class="btn-toolbar mb-2 mb-md-0"></div>
+          </div>
 
           <div data-aos="fade-up" data-aos-duration="2500">
-            <h1 id="greeting" style="margin-bottom: 2rem;">Hello</h1>
-            <div data-aos="fade-up" data-aos-duration="2500" id = "mentallyNotOkay">
-                Enter Item: <br>
-              <input type = "text" name = "firstName" id = "myText">  
-              <button type = "button" onclick = "getData()">Click Me!</button>
-              <li id = "r1"></li>
-              <li id = "r2"></li>
-              <li id = "r3"></li>
-              <li id = "r4"></li>
-              <li id = "r5"></li>
-              <li id = "r6"></li>
-              <li id = "r7"></li>
-              <li id = "r8"></li>
-              <li id = "r9"></li>
-              <li id = "r10"></li>
-              <li id = "r11"></li>
-              <li id = "r12"></li>
-              <li id = "r13"></li>
-              <li id = "r14"></li>
-              <li id = "r15"></li>
-              <li id = "r16"></li>
-              <li id = "r17"></li>
-              <li id = "r18"></li>
-              <li id = "r19"></li>
-            </div>
+            <h1>Hello</h1>
+            <canvas id="myChart"></canvas>
+
           </div>
         </main>
       </div>
-      <script>
-          document.getElementById("greeting").innerHTML =
-            "Hello, " + localStorage.getItem("name");
-        </script>
-            
-      </div>
-
+    </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
     <script src="dashboard.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    <script src="js/foodchart.js"></script>
-
+    <script src="js/totalfat.js"></script>
   </body>
 </html>

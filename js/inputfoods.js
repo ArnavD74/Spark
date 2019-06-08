@@ -116,11 +116,11 @@ function getData() {
     document.getElementById("r19").innerHTML = "Protein: " + protein;
 
     localStorage.setItem("calories", localStorage.getItem("calories") + calories);
-    localStorage.setItem("totalfat", calories);
-    localStorage.setItem("saturatedfat", calories);
-    localStorage.setItem("transfat", calories);
-    localStorage.setItem("cholesterol", calories);
-    localStorage.setItem("sodium", calories);
-    localStorage.setItem("dietaryfiber", calories);
-    localStorage.setItem("sugar", calories);
+    localStorage.setItem("totalfat", localStorage.getItem("totalfat") + totalfat);
+    localStorage.setItem("saturatedfat", localStorage.getItem("saturatedfat") + saturatedfat);
+    localStorage.setItem("transfat", localStorage.getItem("transfat") + transfat);
+    localStorage.setItem("cholesterol", localStorage.getItem("cholesterol") + cholesterol);
+    localStorage.setItem("sodium", localStorage.getItem("sodium") + sodium);
+    localStorage.setItem("dietaryfiber", localStorage.getItem("dietaryfiber") + dietaryfiber);
+    localStorage.setItem("sugar", localStorage.getItem("sugar") + sugar);
 }

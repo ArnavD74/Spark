@@ -16,6 +16,7 @@ function update() {
 }
 
 function goToDashboard() {
+  localStorage.setItem("")
   window.location.href = "loading.html";
 }
 
