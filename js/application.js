@@ -36,12 +36,19 @@ function showProgress() {
 }
 
 var questions = [
-  new Question("Question2?", [
-    "choice 1",
-    "choice 2",
-    "choice 3",
-    "choice 4",
-    "choice 5"
+  new Question("How long do you spend outdoors daily?", [
+    "<1 hour",
+    "1 hour",
+    "3 hours",
+    "6 hours",
+    ">6 hours"
+  ]),
+  new Question("How many fruits are in your daily diet?", [
+    "None",
+    "<1 cup",
+    "1-2 cups",
+    "2 cups",
+    "2+ cups"
   ])
 ];
 
