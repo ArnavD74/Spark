@@ -9,6 +9,12 @@ var sugars;
 var protein;
 var calories1;
 var calories2;
+var calories3;
+var calories4;
+var calories5;
+var calories6;
+var calories7;
+
 
 function getData() {
   var foodName = document.getElementById("myText").value;
@@ -23,8 +29,36 @@ function getData() {
     })
     .then(function(myJson) {
       let obj = myJson;
-      calories1 = obj.hits[0].fields.nf_calories;
-      calories2 = obj.hits[0].fields.nf_calories;
+
+      if (parseInt(localStorage.getItem("day")) == 1);
+      {
+        calories1 += obj.hits[0].fields.nf_calories;
+      }
+      if (parseInt(localStorage.getItem("day")) == 2);
+      {
+        calories2 += obj.hits[0].fields.nf_calories;
+      }
+      if (parseInt(localStorage.getItem("day")) == 3);
+      {
+        calories3 += obj.hits[0].fields.nf_calories;
+      }
+      if (parseInt(localStorage.getItem("day")) == 4);
+      {
+        calories4 += obj.hits[0].fields.nf_calories;
+      }
+      if (parseInt(localStorage.getItem("day")) == 5);
+      {
+        calories5 += obj.hits[0].fields.nf_calories;
+      }
+      if (parseInt(localStorage.getItem("day")) == 6);
+      {
+        calories6 += obj.hits[0].fields.nf_calories;
+      }
+      if (parseInt(localStorage.getItem("day")) == 7);
+      {
+        calories7 += obj.hits[0].fields.nf_calories;
+}
+      
       totalFat = obj.hits[0].fields.nf_total_fat;
       saturatedFat = obj.hits[0].fields.nf_saturated_fat;
       cholesterol = obj.hits[0].fields.nf_cholesterol;
@@ -35,43 +69,40 @@ function getData() {
       protein = obj.hits[0].fields.nf_protein;
     });
 
-  if (localStorage.getItem("day") == 1);
-  {
-    document.getElementById("r1").innerHTML = "Calories: " + calories1;
-  }
-  if (localStorage.getItem("day") == 2);
-  {
-    document.getElementById("r1").innerHTML = "Calories: " + calories2;
-  }
-
   document.getElementById("r2").innerHTML = "Total Fat: " + totalFat;
   document.getElementById("r3").innerHTML = "Saturated Fat: " + saturatedFat;
   document.getElementById("r4").innerHTML = "Cholesterol: " + cholesterol;
   document.getElementById("r5").innerHTML = "Sodium: " + sodium;
-  document.getElementById("r6").innerHTML =
-    "Total Carbohydrates: " + totalCarbohydrates;
+  document.getElementById("r6").innerHTML = "Total Carbohydrates: " + totalCarbohydrates;
   document.getElementById("r7").innerHTML = "Dietary Fiber: " + dietaryFiber;
   document.getElementById("r8").innerHTML = "Sugars: " + sugars;
   document.getElementById("r9").innerHTML = "Protein: " + protein;
 
   localStorage.setItem("calories1", localStorage.getItem("calories1") + calories1);
   localStorage.setItem("calories2", localStorage.getItem("calories2") + calories2);
+  localStorage.setItem("calories3", localStorage.getItem("calories3") + calories3);
+  localStorage.setItem("calories4", localStorage.getItem("calories4") + calories4);
+  localStorage.setItem("calories5", localStorage.getItem("calories5") + calories5);
+  localStorage.setItem("calories6", localStorage.getItem("calories6") + calories6);
+  localStorage.setItem("calories7", localStorage.getItem("calories7") + calories7);
 
-  
-  
   localStorage.setItem("totalfat", localStorage.getItem("totalfat") + totalFat);
+
   localStorage.setItem(
     "saturatedfat",
     localStorage.getItem("saturatedfat") + saturatedFat
   );
+
   localStorage.setItem(
     "cholesterol",
     localStorage.getItem("cholesterol") + cholesterol
   );
+
   localStorage.setItem("sodium", localStorage.getItem("sodium") + sodium);
   localStorage.setItem(
     "dietaryfiber",
     localStorage.getItem("dietaryfiber") + dietaryFiber
   );
+
   localStorage.setItem("sugars", localStorage.getItem("sugars") + sugars);
 }
