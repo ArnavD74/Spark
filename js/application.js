@@ -1,6 +1,6 @@
 function update() {
   if (quiz.isEnded()) {
-    // generate results
+    goToDashboard();
   } else {
     var element = document.getElementById("question");
     element.innerHTML = quiz.getQuestion().question;
@@ -13,6 +13,10 @@ function update() {
     }
     showProgress();
   }
+}
+
+function goToDashboard() {
+  window.location.href = "http://127.0.0.1:5500/loading.html";
 }
 
 function answer(id, answer) {

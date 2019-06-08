@@ -47,16 +47,11 @@
       <header class="masthead mb-auto">
         <div class="inner">
           <h3 class="masthead-brand">Spark</h3>
-          <nav class="nav nav-masthead justify-content-center">
-            <a class="nav-link" href="index.html">Home</a>
-            <a class="nav-link" href="quiz.html">Quiz</a>
-            <a class="nav-link" href="#">Contact</a>
-          </nav>
         </div>
       </header>
 
       <main role="main" class="inner cover">
-        
+        <img src="img/loading.gif" alt="Loading...">
       </main>
 
       <footer class="mastfoot mt-auto">
@@ -66,6 +61,12 @@
           </p>
         </div>
       </footer>
+
+      <script>
+        setTimeout(function() {
+          window.location.href = "http://127.0.0.1:5500/dashboard.html"
+        }, 5000);
+      </script>
     </div>
   </body>
 </html>
