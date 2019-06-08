@@ -28,6 +28,7 @@ function goToDashboard() {
     localStorage.getItem("potassium"),
     localStorage.getItem("magnesium")
   ];
+
   localStorage.setItem("day", 6);
   window.location.href = "loading.html";
 }
