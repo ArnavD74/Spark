@@ -16,7 +16,7 @@ function update() {
 }
 
 function goToDashboard() {
-  window.location.href = "/loading.html";
+  window.location.href = "loading.html";
 }
 
 function answer(id, answer) {
