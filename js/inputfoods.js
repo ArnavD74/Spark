@@ -43,7 +43,6 @@ function getData(){
         vitaminB6 = 0; 
         vitaminB12 = 0;
         score = 86;
-
         
     }
 
@@ -90,4 +89,24 @@ function getData(){
         vitaminB6 = 0;
         vitaminB12 = 0;
     }
+
+    document.getElementById("r1").innerHTML = "Calories: " + calories;
+    document.getElementById("r2").innerHTML = "Total Fat: " + totalFat;
+    document.getElementById("r3").innerHTML = "Saturated Fat: " + saturatedFat;
+    document.getElementById("r4").innerHTML = "Trans Fat" + transFat;
+    document.getElementById("r5").innerHTML = "Cholestrol: " + cholestrol;
+    document.getElementById("r6").innerHTML = "Sodium: " + sodium;
+    document.getElementById("r7").innerHTML = "Total Carbohydrates: " + totalCarbohydrates;
+    document.getElementById("r8").innerHTML = "Dietary Fiber: " + dietaryFiber;
+    document.getElementById("r9").innerHTML = "Total Sugar: " + totalSugar;
+    document.getElementById("r10").innerHTML = "Vitamin A: " + vitaminA;
+    document.getElementById("r11").innerHTML = "Vitamin C: " + vitaminC;
+    document.getElementById("r12").innerHTML = "Vitamin D: " + vitaminD;
+    document.getElementById("r12").innerHTML = "Vitamin E: " + vitaminE;
+    document.getElementById("r13").innerHTML = "Vitamin K: " + vitaminK;
+    document.getElementById("r14").innerHTML = "Thiamine: " + Thiamine;
+    document.getElementById("r15").innerHTML = "Riboflavin: " + Riboflavin;
+    document.getElementById("r16").innerHTML = "Niacin: " + Niacin;
+    document.getElementById("r17").innerHTML = "Vitamin B6: " + vitaminB6;
+    document.getElementById("r18").innerHTML = "Vitamin B12: " + vitaminB12;
 }
