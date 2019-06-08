@@ -16,7 +16,7 @@ function update() {
 }
 
 function goToDashboard() {
-  window.location.replace("arnavd74.github.io/Spark/loading.html");
+  window.location.href = "arnavd74.github.io/Spark/loading.html";
 }
 
 function answer(id, answer) {
