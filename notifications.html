@@ -95,6 +95,14 @@
                   Notifications <span class="sr-only">(current)</span>
                 </a>
               </li>
+              <div>
+                <li class="nav-item">
+                  <button type="button" class="btn btn-success" style="margin-left: 6rem; margin-bottom: 2rem; position: absolute; bottom: 0;" onclick="changeDay();" id="currentday">Saturday</button>
+                </li>
+                <li class="nav-item">
+                  <button type="button" class="btn btn-danger" style="margin-left: 1rem; margin-bottom: 2rem; position: absolute; bottom: 0;" onclick="reset();">Reset</button>
+                </li>
+                </div>
             </ul>
           </div>
         </nav>
@@ -119,6 +127,52 @@
           document.getElementById("greeting").innerHTML =
             "Hello, " + localStorage.getItem("name");
         </script>
+        <script>
+            function reset() {
+              localStorage.setItem("calories", 0);
+      localStorage.setItem("totalfat", 0);
+      localStorage.setItem(
+        "saturatedfat", 0
+      );
+      localStorage.setItem(
+        "cholesterol", 0
+      );
+      localStorage.setItem("sodium", 0);
+      localStorage.setItem(
+        "dietaryfiber", 0
+      );
+      localStorage.setItem("sugars", 0);
+            }
+    
+            function changeDay() {
+              if (localStorage.getItem("day") >= 7) {
+                localStorage.setItem("day", 1)
+              } else {
+                localStorage.setItem("day", parseInt(localStorage.getItem("day")) + 1)
+              }
+              if (localStorage.getItem("day") == 1) {
+                document.getElementById("currentday").innerHTML = "Monday";
+              }
+              if (localStorage.getItem("day") == 2) {
+                document.getElementById("currentday").innerHTML = "Tuesday";
+              }
+              if (localStorage.getItem("day") == 3) {
+                document.getElementById("currentday").innerHTML = "Wednesday";
+              }
+              if (localStorage.getItem("day") == 4) {
+                document.getElementById("currentday").innerHTML = "Thursday";
+              }
+              if (localStorage.getItem("day") == 5) {
+                document.getElementById("currentday").innerHTML = "Friday";
+              }
+              if (localStorage.getItem("day") == 6) {
+                document.getElementById("currentday").innerHTML = "Saturday";
+              }
+              if (localStorage.getItem("day") == 7) {
+                document.getElementById("currentday").innerHTML = "Sunday";
+              }
+            }
+          </script>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>

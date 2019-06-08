@@ -16,7 +16,7 @@ function update() {
 }
 
 function goToDashboard() {
-  localStorage.setItem("")
+  localStorage.setItem("day", 6);
   window.location.href = "loading.html";
 }
 

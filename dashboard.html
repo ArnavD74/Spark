@@ -117,11 +117,38 @@
                   Notifications
                 </a>
               </li>
+              <div>
+                <li class="nav-item">
+                  <button type="button" class="btn btn-success" style="margin-left: 6rem; margin-bottom: 2rem; position: absolute; bottom: 0;" onclick="changeDay();">Change Day</button>
+                </li>
+                <li class="nav-item">
+                  <button type="button" class="btn btn-danger" style="margin-left: 1rem; margin-bottom: 2rem; position: absolute; bottom: 0;" onclick="reset();">Reset</button>
+                </li>
+              </div>
             </ul>
           </div>
         </nav>
+      <script>
+        function reset() {
+          localStorage.setItem("calories", 0);
+  localStorage.setItem("totalfat", 0);
+  localStorage.setItem(
+    "saturatedfat", 0
+  );
+  localStorage.setItem(
+    "cholesterol", 0
+  );
+  localStorage.setItem("sodium", 0);
+  localStorage.setItem(
+    "dietaryfiber", 0
+  );
+  localStorage.setItem("sugars", 0);
+        }
 
-
+        function changeDay() {
+          localStorage.setItem("day", localStorage.getItem("day") + 1)
+        }
+      </script>
 
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
