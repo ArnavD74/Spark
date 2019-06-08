@@ -13,12 +13,13 @@ var chart = new Chart(ctx, {
       "Saturday",
       "Sunday"
     ],
+  
     datasets: [
       {
         label: "Calories/Day over Time",
         backgroundColor: "rgb(255, 99, 132)",
         borderColor: "rgb(255, 99, 132)",
-        data: [0, 2, 5, 2, 20, 30, 45]
+        data: [0, 1, 2, 3, 4, 5, 6]
       }
     ]
   },
@@ -28,10 +29,11 @@ var chart = new Chart(ctx, {
 });
 
 if (localStorage.getItem("day") == 1) {
-  chart.data.datasets[0].data[0] = localStorage.getItem("calories");
+  chart.data.datasets[0].data[0] = 30;
 }
+
 if (localStorage.getItem("day") == 2) {
-  chart.data.datasets[0].data[1] = localStorage.getItem("calories");
+  chart.data.datasets[0].data[1] = 60;
 }
 if (localStorage.getItem("day") == 3) {
   chart.data.datasets[0].data[2] = localStorage.getItem("calories");

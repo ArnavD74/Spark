@@ -15,10 +15,7 @@ function update() {
   }
 }
 
-function goToDashboard() {
-  localStorage.setItem("day", 6);
-  window.location.href = "loading.html";
-}
+
 
 function answer(id, answer) {
   var button = document.getElementById(id);
