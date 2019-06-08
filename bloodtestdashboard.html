@@ -66,9 +66,10 @@
     <script src="js/aosinit.js"></script>
 
     <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="dashboard.html"
-        >Spark</a
-      >
+
+      
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Spark</a>
+      
       <input
         class="form-control form-control-dark w-100"
         type="text"
@@ -77,7 +78,7 @@
       />
       <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
-          <a class="nav-link" href="index.html">Sign out</a>
+          <a class="nav-link" href="#">Sign out</a>
         </li>
       </ul>
     </nav>
@@ -117,6 +118,12 @@
                   Notifications
                 </a>
               </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="notifications.html">
+                    <span data-feather="bar-chart-2"></span>
+                    <div id="txt"></div>
+                  </a>
+                </li>
             </ul>
           </div>
         </nav>
@@ -134,7 +141,13 @@
           </div>
 
           <div data-aos="fade-up" data-aos-duration="2500" class="progressbars">
-            <h1 id="greeting" style="margin-bottom: 2rem;">Hello</h1>
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Gender</label>
+              <select class="form-control" id="exampleFormControlSelect1">
+                <option>Male</option>
+                <option>Female</option>
+              </select>
+            </div>
             <div class="progress">
               <div
                 class="progress-bar"
@@ -144,7 +157,7 @@
                 aria-valuemin="0"
                 aria-valuemax="200"
               >
-                <h4><a href="calories.html"><font color="white">Calories</font></a></h4>
+                <h4><a href="glucose.html"><font color="white">Glucose</font></a> (mg/dl)</h4>
               </div>
             </div>
             <div class="progress">
@@ -156,7 +169,7 @@
                 aria-valuemin="0"
                 aria-valuemax="280"
               >
-                <h4>Total Fat (g)</h4>
+                <h4>Sodium (mmol/L)</h4>
               </div>
             </div>
             <div class="progress">
@@ -168,7 +181,7 @@
                 aria-valuemin="0"
                 aria-valuemax="8.9"
               >
-                <h4>Saturated Fat (g)</h4>
+                <h4>Potassium (mmol/L)</h4>
               </div>
             </div>
             <div class="progress">
@@ -180,7 +193,7 @@
                 aria-valuemin="0"
                 aria-valuemax="202"
               >
-                <h4>Trans Fat (g)</h4>
+                <h4>Chloride (mmol/L)</h4>
               </div>
             </div>
             <div class="progress">
@@ -192,7 +205,7 @@
                 aria-valuemin="0"
                 aria-valuemax="52"
               >
-                <h4>Cholesterol (mg)</h4>
+                <h4>Carbon Dioxide (mmol/L)</h4>
               </div>
             </div>
             <div class="progress">
@@ -204,7 +217,7 @@
                 aria-valuemin="0"
                 aria-valuemax="2.05"
               >
-                <h4>Sodium (mg)</h4>
+                <h4>Creatinine (mg/dl)</h4>
               </div>
             </div>
             <div class="progress">
@@ -216,7 +229,7 @@
                 aria-valuemin="0"
                 aria-valuemax="10.4"
               >
-                <h4>Carbohydrates (g)</h4>
+                <h4>Uric Acid (mg/dl)</h4>
               </div>
             </div>
             <div class="progress">
@@ -228,7 +241,7 @@
                 aria-valuemin="0"
                 aria-valuemax="21"
               >
-                <h4>Dietary Fiber (g)</h4>
+                <h4>Calcium (mg/dl)</h4>
               </div>
             </div>
             <div class="progress">
@@ -240,7 +253,7 @@
                 aria-valuemin="0"
                 aria-valuemax="1.7"
               >
-                <h4>Sugars (g)</h4>
+                <h4>Magnesium (g/dl)</h4>
               </div>
             </div>
             <div class="progress">
@@ -252,8 +265,9 @@
                 aria-valuemin="0"
                 aria-valuemax="378"
               >
-                <h4>Protein (g)</h4>
+                <h4>Cholesterol (mg/dl)</h4>
               </div>
+            </div>
             <div class="progress">
               <div
                 class="progress-bar"
@@ -263,6 +277,21 @@
                 aria-valuemin="0"
                 aria-valuemax="350"
               >
+                <h4>Triglycerides (mg/dl)</h4>
+              </div>
+            </div>
+            <div class="progress">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                style="width: 50%; text-align: left;"
+                aria-valuenow="50"
+                aria-valuemin="0"
+                aria-valuemax="26.3"
+              >
+                <h4>Blood Cells (total count)</h4>
+              </div>
+            </div>
             <!-- set width to percent filled -->
           </div>
 
@@ -274,10 +303,6 @@
           ></canvas> -->
         </main>
       </div>
-      <script>
-        document.getElementById("greeting").innerHTML =
-          "Hello, " + localStorage.getItem("name");
-      </script>
     </div>
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
