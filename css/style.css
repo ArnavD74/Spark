@@ -100,3 +100,7 @@ body {
 .mastfoot {
   color: rgba(0, 0, 0, 0.5);
 }
+
+#h3{
+  text-align: center;
+}
