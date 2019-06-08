@@ -28,12 +28,16 @@ var chart = new Chart(ctx, {
   options: {}
 });
 
+
+
 if (localStorage.getItem("day") == 1) {
-  chart.data.datasets[0].data[0] = 30;
+  chart.data.datasets[0].data[0] = localStorage.getItem("calories1");
 }
 
+localStorage.setItem("day", 2);
+
 if (localStorage.getItem("day") == 2) {
-  chart.data.datasets[0].data[1] = 60;
+  chart.data.datasets[0].data[1] = localStorage.getItem("calories2");
 }
 if (localStorage.getItem("day") == 3) {
   chart.data.datasets[0].data[2] = localStorage.getItem("calories");
