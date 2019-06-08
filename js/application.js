@@ -16,46 +16,87 @@ function update() {
 }
 
 function goToDashboard() {
-  var values = [
+  var vitamins = [
     localStorage.getItem("vitaminD"),
     localStorage.getItem("vitaminC"),
     localStorage.getItem("vitaminB1"),
-    localStorage.getItem("vitaminB6"),
+    localStorage.getItem("vitaminB6")
+  ];
+
+  var proteins = [
     localStorage.getItem("plantProtein"),
-    localStorage.getItem("wheyProtein"),
+    localStorage.getItem("wheyProtein")
+  ];
+
+  var powders = [
     localStorage.getItem("riboflavin"),
     localStorage.getItem("calcium"),
     localStorage.getItem("potassium"),
     localStorage.getItem("magnesium")
   ];
 
-  var valuesLength = values.length;
-  var max = Math.max(parseInt(values[i]));
-  var highest = 0;
+  var vitaminsLength = vitamins.length;
+  var proteinsLength = proteins.length;
+  var powdersLength = powders.length;
+  var vitaminsMax = parseInt(vitamins[0]);
+  var proteinsMax = parseInt(vitamins[0]);
+  var powdersMax = parseInt(vitamins[0]);
+  var highestVitamin = 0;
+  var highestProtein = 0;
+  var highestPowder = 0;
 
-  for (var i = 0; i < valuesLength; i++) {
-    if (max == parseInt(values[i])) {
-      highest = i;
+  for (var i = 0; i < vitaminsLength; i++) {
+    if (parseInt(vitamins[i]) > vitaminsMax) {
+      vitaminsMax = parseInt(vitamins[i]);
+      highestVitamin = i;
     }
   }
 
-  if (highest == 1) {
+  for (var j = 0; j < proteinsLength; j++) {
+    if (parseInt(proteins[j]) > proteinsMax) {
+      vitaminsMax = parseInt(proteins[j]);
+      highestProtein = j;
+    }
   }
-  if (highest == 1) {
+
+  for (var k = 0; k < powdersLength; k++) {
+    if (parseInt(powders[k]) > powdersMax) {
+      vitaminsMax = parseInt(powders[k]);
+      highestPowder = k;
+    }
   }
-  if (highest == 1) {
+
+  if (highestVitamin == 0) {
+    localStorage.setItem("vitamin", "Vitamin D");
   }
-  if (highest == 1) {
+  if (highestVitamin == 1) {
+    localStorage.setItem("vitamin", "Vitamin C");
   }
-  if (highest == 1) {
+  if (highestVitamin == 2) {
+    localStorage.setItem("vitamin", "Vitamin B1");
   }
-  if (highest == 1) {
+  if (highestVitamin == 3) {
+    localStorage.setItem("vitamin", "Vitamin B6");
   }
-  if (highest == 1) {
+
+  if (highestProtein == 0) {
+    localStorage.setItem("protein", "Plant Protein");
   }
-  if (highest == 1) {
+  if (highestProtein == 1) {
+    localStorage.setItem("protein", "Whey Protein");
   }
-  if (highest == 1) {
+
+  if (highestPowder == 0) {
+    localStorage.setItem("powder", "Riboflavin");
+  }
+  if (highestPowder == 1) {
+    localStorage.setItem("powder", "Calcium");
+  }
+  if (highestPowder == 2) {
+    localStorage.setItem("powder", "Potassium");
+  }
+  if (highestPowder == 3) {
+    localStorage.setItem("powder", "Magnesium");
   }
 
   localStorage.setItem("day", 6);
