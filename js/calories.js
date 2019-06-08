@@ -13,13 +13,21 @@ var chart = new Chart(ctx, {
       "Saturday",
       "Sunday"
     ],
-  
+
     datasets: [
       {
         label: "Calories/Day over Time",
         backgroundColor: "rgb(255, 99, 132)",
         borderColor: "rgb(255, 99, 132)",
-        data: [0, 1, 2, 3, 4, 5, 6]
+        data: [
+          localStorage.getItem("calories1"),
+          localStorage.getItem("calories2"),
+          localStorage.getItem("calories3"),
+          localStorage.getItem("calories4"),
+          localStorage.getItem("calories5"),
+          localStorage.getItem("calories6"),
+          localStorage.getItem("calories7")
+        ]
       }
     ]
   },
@@ -27,28 +35,3 @@ var chart = new Chart(ctx, {
   // Configuration options go here
   options: {}
 });
-
-if (parseInt(localStorage.getItem("day")) == 1) {
-  chart.data.datasets[0].data[0] = localStorage.getItem("calories1");
-}
-
-if (parseInt(localStorage.getItem("day")) == 2) {
-  chart.data.datasets[0].data[1] = localStorage.getItem("calories2");
-}
-
-if (localStorage.getItem("day") == 3) {
-  chart.data.datasets[0].data[2] = localStorage.getItem("calories3");
-}
-if (localStorage.getItem("day") == 4) {
-  chart.data.datasets[0].data[3] = localStorage.getItem("calories4");
-}
-if (localStorage.getItem("day") == 5) {
-  chart.data.datasets[0].data[4] = localStorage.getItem("calories5");
-}
-if (localStorage.getItem("day") == 6) {
-  chart.data.datasets[0].data[5] = localStorage.getItem("calories6");
-}
-if (localStorage.getItem("day") == 7) {
-  chart.data.datasets[0].data[6] = localStorage.getItem("calories7");
-}
- 
