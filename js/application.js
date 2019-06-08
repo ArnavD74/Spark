@@ -11,6 +11,7 @@ function update() {
       element.innerHTML = choices[i];
       answer("button" + (i + 1), choices[i]);
     }
+    showProgress();
   }
 }
 
@@ -20,6 +21,13 @@ function answer(id, answer) {
     quiz.answer(answer);
     update();
   };
+}
+
+function showProgress() {
+  var currentQuestion = quiz.questionIndex + 1;
+  var element = document.getElementById("progress");
+  element.innerHTML =
+    "Question " + currentQuestion + " of " + quiz.questions.length;
 }
 
 var questions = [
