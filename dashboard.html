@@ -41,13 +41,35 @@
         }
       }
     </style>
+
+<script>
+    function startTime() {
+      var today = new Date();
+      var h = today.getHours();
+      var m = today.getMinutes();
+      var s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById('txt').innerHTML =
+      h + ":" + m + ":" + s;
+      var t = setTimeout(startTime, 500);
+    }
+    function checkTime(i) {
+      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+      return i;
+    }
+    </script>
+  
   </head>
-  <body>
-    <script src="js/aos.js"></script>
+  <body onload="startTime()">
+      <script src="js/aos.js"></script>
     <script src="js/aosinit.js"></script>
 
     <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+
+      
       <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Spark</a>
+      
       <input
         class="form-control form-control-dark w-100"
         type="text"
@@ -96,9 +118,18 @@
                   Notifications
                 </a>
               </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="notifications.html">
+                    <span data-feather="bar-chart-2"></span>
+                    <div id="txt"></div>
+                  </a>
+                </li>
             </ul>
           </div>
         </nav>
+
+
+
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
           <div
