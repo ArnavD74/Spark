@@ -100,8 +100,8 @@
               </li>
               <div>
                   <li class="nav-item">
-                    <button type="button" class="btn btn-success" style="margin-left: 6rem; margin-bottom: 2rem; position: absolute; bottom: 0;" onclick="changeDay();">Change Day</button>
-                  </li>
+                      <button type="button" class="btn btn-success" style="margin-left: 6rem; margin-bottom: 2rem; position: absolute; bottom: 0;" onclick="changeDay();" id="currentday"></button>
+                    </li>
                   <li class="nav-item">
                     <button type="button" class="btn btn-danger" style="margin-left: 1rem; margin-bottom: 2rem; position: absolute; bottom: 0;" onclick="reset();">Reset</button>
                   </li>
@@ -177,8 +177,36 @@
             }
     
             function changeDay() {
-              localStorage.setItem("day", localStorage.getItem("day") + 1)
-            }
+        if (localStorage.getItem("day") >= 7) {
+          localStorage.setItem("day", 1);
+        } else {
+          localStorage.setItem(
+            "day",
+            parseInt(localStorage.getItem("day")) + 1
+          );
+        }
+        if (localStorage.getItem("day") == 1) {
+          document.getElementById("currentday").innerHTML = "Monday";
+        }
+        if (localStorage.getItem("day") == 2) {
+          document.getElementById("currentday").innerHTML = "Tuesday";
+        }
+        if (localStorage.getItem("day") == 3) {
+          document.getElementById("currentday").innerHTML = "Wednesday";
+        }
+        if (localStorage.getItem("day") == 4) {
+          document.getElementById("currentday").innerHTML = "Thursday";
+        }
+        if (localStorage.getItem("day") == 5) {
+          document.getElementById("currentday").innerHTML = "Friday";
+        }
+        if (localStorage.getItem("day") == 6) {
+          document.getElementById("currentday").innerHTML = "Saturday";
+        }
+        if (localStorage.getItem("day") == 7) {
+          document.getElementById("currentday").innerHTML = "Sunday";
+        }
+      }
           </script>
       </div>
 

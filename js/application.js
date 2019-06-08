@@ -9,13 +9,25 @@ function update() {
     for (var i = 0; i < choices.length; i++) {
       var element = document.getElementById("choice" + (i + 1));
       element.innerHTML = choices[i];
-      answer("button" + (i + 1), i, choices[i]);
+      answer("button" + (i + 1), choices[i]);
     }
     showProgress();
   }
 }
 
 function goToDashboard() {
+  var values = [
+    localStorage.getItem("vitaminD"),
+    localStorage.getItem("vitaminC"),
+    localStorage.getItem("vitaminB1"),
+    localStorage.getItem("vitaminB6"),
+    localStorage.getItem("plantProtein"),
+    localStorage.getItem("wheyProtein"),
+    localStorage.getItem("riboflavin"),
+    localStorage.getItem("calcium"),
+    localStorage.getItem("potassium"),
+    localStorage.getItem("magnesium")
+  ];
   localStorage.setItem("day", 6);
   window.location.href = "loading.html";
 }
@@ -57,12 +69,60 @@ var questions = [
     "Often",
     "Always"
   ]),
-  new Question("Do you include dairy in your diet?", [
-    "Never",
-    "Rarely",
-    "Sometimes",
-    "Often",
-    "Always"
+  new Question("How much dairy do you eat?", [
+    "Barely any",
+    "Small amount",
+    "Medium amount",
+    "Large amount",
+    "Extremely large amount"
+  ]),
+  new Question("Do you include beans and legumes in your diet?", [
+    "Always, in all meals",
+    "Yes, usually in every other meal",
+    "Every once in a while",
+    "Not very often",
+    "Not at all"
+  ]),
+  new Question("How many hours of sleep do you get?", [
+    "1 - 2 hours",
+    "2 - 5 hours",
+    "5 - 8 hours",
+    "8 - 10 hours",
+    "10+ hours"
+  ]),
+  new Question("Do you regularly eat white bread and wheat products?", [
+    "None or 1 time a week",
+    "2 or 3 times a week",
+    "4 or 5 times a week",
+    "6 or 7 times a week",
+    "Every day"
+  ]),
+  new Question(
+    "How often do you sugary beverages e.g juice, soda, sweet tea?",
+    [
+      "0 per week, only water!",
+      "1 - 3 per week",
+      "4 - 6 per week",
+      "7 - 9 per week",
+      "10+ per week"
+    ]
+  ),
+  new Question(
+    "Per week, how many hours do you think you are sedentary or sitting down?",
+    [
+      "<2 hours",
+      "2 - 4 per week",
+      "5 - 7 per week",
+      "7 - 10 per week ",
+      "11+ per week"
+    ]
+  ),
+  new Question("What is the typical climate of the place where you live?", [
+    "19 degrees F and below",
+    "49 degrees to  20 degrees F",
+    "69 degrees F to 50 degrees",
+    "100 degrees F to 70 degrees",
+    "Above 100 degrees F"
   ])
 ];
 
