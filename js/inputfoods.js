@@ -54,6 +54,11 @@ function getData() {
   document.getElementById("r8").innerHTML = "Sugars: " + sugars;
   document.getElementById("r9").innerHTML = "Protein: " + protein;
 
+  localStorage.setItem("calories1", localStorage.getItem("calories1") + calories1);
+  localStorage.setItem("calories2", localStorage.getItem("calories2") + calories2);
+
+  
+  
   localStorage.setItem("totalfat", localStorage.getItem("totalfat") + totalFat);
   localStorage.setItem(
     "saturatedfat",
