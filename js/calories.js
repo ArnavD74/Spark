@@ -29,26 +29,26 @@ var chart = new Chart(ctx, {
 });
 
 if (parseInt(localStorage.getItem("day")) == 1) {
-  chart.data.datasets[0].data[0] = localStorage.getItem("calories1");
+  chart.data.datasets[0].data[0] = parseInt(localStorage.getItem("calories1"));
+  alert("Hello World");
 }
 
 if (parseInt(localStorage.getItem("day")) == 2) {
-  chart.data.datasets[0].data[1] = localStorage.getItem("calories2");
+  chart.data.datasets[0].data[1] = parseInt(localStorage.getItem("calories2"));
+  alert("Hello World");
 }
-
-if (localStorage.getItem("day") == 3) {
-  chart.data.datasets[0].data[2] = localStorage.getItem("calories3");
-}
-if (localStorage.getItem("day") == 4) {
-  chart.data.datasets[0].data[3] = localStorage.getItem("calories4");
-}
-if (localStorage.getItem("day") == 5) {
-  chart.data.datasets[0].data[4] = localStorage.getItem("calories5");
-}
-if (localStorage.getItem("day") == 6) {
-  chart.data.datasets[0].data[5] = localStorage.getItem("calories6");
-}
+  if (localStorage.getItem("day") == 3) {
+    chart.data.datasets[0].data[2] = parseInt(localStorage.getItem("calories3"));
+  }
+  if (localStorage.getItem("day") == 4) {
+    chart.data.datasets[0].data[3] = parseInt(localStorage.getItem("calories4"));
+  }
+  if (localStorage.getItem("day") == 5) {
+    chart.data.datasets[0].data[4] = parseInt(localStorage.getItem("calories5"));
+  }
+  if (localStorage.getItem("day") == 6) {
+    chart.data.datasets[0].data[5] = parseInt(localStorage.getItem("calories6"));
+  }
 if (localStorage.getItem("day") == 7) {
-  chart.data.datasets[0].data[6] = localStorage.getItem("calories7");
+  chart.data.datasets[0].data[6] = parseInt(localStorage.getItem("calories7"));
 }
- 
