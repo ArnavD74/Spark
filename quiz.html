@@ -14,7 +14,7 @@
     <meta name="generator" content="Jekyll v3.8.5" />
     <title>Spark</title>
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="quiz.css" />
 
     <!-- Bootstrap core CSS -->
     <link
@@ -43,27 +43,28 @@
     <!-- Custom styles for this template -->
     <link href="cover.css" rel="stylesheet" />
   </head>
-  <body class="text-center">
+  <body class="text-center" onload="initialize();">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
       <header class="masthead mb-auto">
         <div class="inner">
           <h3 class="masthead-brand">Spark</h3>
           <nav class="nav nav-masthead justify-content-center">
-            <a class="nav-link active" href="#">Home</a>
-            <a class="nav-link" href="quiz.html">Quiz</a>
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link active" href="#">Quiz</a>
             <a class="nav-link" href="#">Contact</a>
           </nav>
         </div>
       </header>
 
       <main role="main" class="inner cover">
-        <h1 class="cover-heading">Take the quiz.</h1>
-        <p class="lead">
-          Spark is a website for finding the right vitamins and protein for you.
-        </p>
-        <p class="lead">
-          <a href="quiz.html" class="btn btn-lg btn-secondary">Get Started</a>
-        </p>
+        <p id="question"></p>
+        <div class="buttons">
+          <button id="button1" type="button" class="btn btn-dark"><span class="choice1"></span></button>
+          <button id="button2" type="button" class="btn btn-dark"><span class="choice2"></span></button>
+          <button id="button3" type="button" class="btn btn-dark"><span class="choice3"></span></button>
+          <button id="button4" type="button" class="btn btn-dark"><span class="choice4"></span></button>
+        </div>
+        <p class="lead">Question x of y</p>
       </main>
 
       <footer class="mastfoot mt-auto">
@@ -74,5 +75,9 @@
         </div>
       </footer>
     </div>
+
+    <script src="application.js"></script>
+    <script src="question.js"></script>
+    <script src="controller.js"></script>
   </body>
 </html>
