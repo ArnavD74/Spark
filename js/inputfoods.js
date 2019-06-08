@@ -7,6 +7,7 @@ var sodium;
 var totalCarbohydrates;
 var dietaryFiber;
 var totalSugar;
+var protein;
 var vitaminA;
 var vitaminC;
 var vitaminD;
@@ -42,6 +43,7 @@ function getData(){
         Niacin = 0; 
         vitaminB6 = 0; 
         vitaminB12 = 0;
+        protein= 0.5;
         score = 86;
         
     }
@@ -66,6 +68,7 @@ function getData(){
         Niacin = 0; 
         vitaminB6 = 0; 
         vitaminB12 = 0;
+        protein = 1.3;
     }
 
     if(foodName == 'Sprite'){
@@ -88,12 +91,13 @@ function getData(){
         Niacin = 0;
         vitaminB6 = 0;
         vitaminB12 = 0;
+        protein = 0.2;
     }
 
     document.getElementById("r1").innerHTML = "Calories: " + calories;
     document.getElementById("r2").innerHTML = "Total Fat: " + totalFat;
     document.getElementById("r3").innerHTML = "Saturated Fat: " + saturatedFat;
-    document.getElementById("r4").innerHTML = "Trans Fat" + transFat;
+    document.getElementById("r4").innerHTML = "Trans Fat: " + transFat;
     document.getElementById("r5").innerHTML = "Cholestrol: " + cholestrol;
     document.getElementById("r6").innerHTML = "Sodium: " + sodium;
     document.getElementById("r7").innerHTML = "Total Carbohydrates: " + totalCarbohydrates;
@@ -109,4 +113,25 @@ function getData(){
     document.getElementById("r16").innerHTML = "Niacin: " + Niacin;
     document.getElementById("r17").innerHTML = "Vitamin B6: " + vitaminB6;
     document.getElementById("r18").innerHTML = "Vitamin B12: " + vitaminB12;
+    document.getElementById("r19").innerHTML = "Protein: " + protein;
+
+    localStorage.setItem("calories", calories);
+    localStorage.setItem("calories", calories);
+    localStorage.setItem("calories", calories);
+    localStorage.setItem("calories", calories);
+    localStorage.setItem("calories", calories);
+    localStorage.setItem("calories", calories);
+    localStorage.setItem("calories", calories);
+    localStorage.setItem("calories", calories);
+    localStorage.setItem("calories", calories);
+    localStorage.setItem("calories", calories);
+    localStorage.setItem("calories", calories);
+    localStorage.setItem("calories", calories);
+    localStorage.setItem("calories", calories);
+    localStorage.setItem("calories", calories);
+    localStorage.setItem("calories", calories);
+    localStorage.setItem("calories", calories);
+    localStorage.setItem("calories", calories);
+    localStorage.setItem("calories", calories);
+    localStorage.setItem("calories", calories);
 }
