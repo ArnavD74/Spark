@@ -49,6 +49,20 @@ var questions = [
     "1-2 cups",
     "2 cups",
     "2+ cups"
+  ]),
+  new Question("Do you include many nuts and red meats in your diet?", [
+    "Never",
+    "Rarely",
+    "Sometimes",
+    "Often",
+    "Always"
+  ]),
+  new Question("Do you include dairy in your diet?", [
+    "Never",
+    "Rarely",
+    "Sometimes",
+    "Often",
+    "Always"
   ])
 ];
 
