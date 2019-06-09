@@ -9,6 +9,19 @@ a:hover {
   color: #fff;
 }
 
+h1 {
+color: "white";
+}
+
+h2 {
+  color: "white";
+  }
+
+  h3 {
+    color: "white";
+    }
+
+
 /* Custom default button */
 .btn-secondary,
 .btn-secondary:hover,
@@ -101,6 +114,3 @@ body {
   color: rgba(0, 0, 0, 0.5);
 }
 
-#h3{
-  text-align: center;
-}
