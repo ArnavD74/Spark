@@ -42,7 +42,7 @@
       }
     </style>
   </head>
-  <body onload="suggest();">
+  <body onload="populateDay(); suggest();">
     <script src="js/aos.js"></script>
     <script src="js/aosinit.js"></script>
 
@@ -84,18 +84,6 @@
                 <a class="nav-link" href="inputfood.html">
                   <span data-feather="shopping-cart"></span>
                   New Food Intake
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="actions.html">
-                  <span data-feather="users"></span>
-                  Actions
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="notifications.html">
-                  <span data-feather="bar-chart-2"></span>
-                  Notifications
                 </a>
               </li>
               <div>
@@ -199,7 +187,32 @@
       document.getElementById("greeting").innerHTML =
         "Hello, " +
         localStorage.getItem("name") +
-        ". Here are your reccomendations.";
+        ". Here are your recommendations.";
+    </script>
+    <script>
+      function populateDay() {
+        if (localStorage.getItem("day") == 1) {
+          document.getElementById("currentday").innerHTML = "Monday";
+        }
+        if (localStorage.getItem("day") == 2) {
+          document.getElementById("currentday").innerHTML = "Tuesday";
+        }
+        if (localStorage.getItem("day") == 3) {
+          document.getElementById("currentday").innerHTML = "Wednesday";
+        }
+        if (localStorage.getItem("day") == 4) {
+          document.getElementById("currentday").innerHTML = "Thursday";
+        }
+        if (localStorage.getItem("day") == 5) {
+          document.getElementById("currentday").innerHTML = "Friday";
+        }
+        if (localStorage.getItem("day") == 6) {
+          document.getElementById("currentday").innerHTML = "Saturday";
+        }
+        if (localStorage.getItem("day") == 7) {
+          document.getElementById("currentday").innerHTML = "Sunday";
+        }
+      }
     </script>
     <script>
       function reset() {

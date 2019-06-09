@@ -61,7 +61,7 @@
     </script>
   
   </head>
-  <body onload="startTime()">
+  <body onload="populateDay(); startTime();">
       <script src="js/aos.js"></script>
     <script src="js/aosinit.js"></script>
 
@@ -103,18 +103,6 @@
                 <a class="nav-link" href="inputfood.html">
                   <span data-feather="shopping-cart"></span>
                   New Food Intake
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="actions.html">
-                  <span data-feather="users"></span>
-                  Actions
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="notifications.html">
-                  <span data-feather="bar-chart-2"></span>
-                  Notifications
                 </a>
               </li>
               <div>
@@ -190,120 +178,120 @@
               <div
                 class="progress-bar"
                 role="progressbar"
-                style="width: 20%; text-align: left;"
+                style="width: 0%; text-align: left;"
                 aria-valuenow=150;
                 aria-valuemin= 0;
                 aria-valuemax="200"
               >
-                <h4><a href="calories.html"><font color="white"><u>Calories</u></font></a></h4>
+                <h4><a href="calories.html"><font color="black"><u>Calories</u></font></a></h4>
               </div>
             </div>
             <div class="progress">
               <div
               >
-                <h4><a href="totalfat.html"><font color="white"><u>Total Fat</u></font></a></h4>
+                <h4>Total Fat</h4>
               </div>
             </div>
             <div class="progress">
               <div
                 class="progress-bar"
                 role="progressbar"
-                style="width: 50%; text-align: left;"
+                style="width: 0%; text-align: left;"
                 aria-valuenow="45"
                 aria-valuemin="0"
                 aria-valuemax="8.9"
               >
-                <h4>Saturated Fat (g)</h4>
+                <h4><font color="black">Saturated Fat (g)</font></h4>
               </div>
             </div>
             <div class="progress">
               <div
                 class="progress-bar"
                 role="progressbar"
-                style="width: 50%; text-align: left;"
+                style="width: 0%; text-align: left;"
                 aria-valuenow="32"
                 aria-valuemin="0"
                 aria-valuemax="202"
               >
-                <h4>Trans Fat (g)</h4>
+                <h4><font color="black">Trans Fat (g)</font></h4>
               </div>
             </div>
             <div class="progress">
               <div
                 class="progress-bar"
                 role="progressbar"
-                style="width: 50%; text-align: left;"
+                style="width: 0%; text-align: left;"
                 aria-valuenow="80"
                 aria-valuemin="0"
                 aria-valuemax="52"
               >
-                <h4>Cholesterol (mg)</h4>
+                <h4><font color="black">Cholesterol (mg)</font></h4>
               </div>
             </div>
             <div class="progress">
               <div
                 class="progress-bar"
                 role="progressbar"
-                style="width: 50%; text-align: left;"
+                style="width: 0%; text-align: left;"
                 aria-valuenow="42"
                 aria-valuemin="0"
                 aria-valuemax="2.05"
               >
-                <h4>Sodium (mg)</h4>
+                <h4><font color="black">Sodium (mg)</font></h4>
               </div>
             </div>
             <div class="progress">
               <div
                 class="progress-bar"
                 role="progressbar"
-                style="width: 50%; text-align: left;"
+                style="width: 0%; text-align: left;"
                 aria-valuenow="11"
                 aria-valuemin="0"
                 aria-valuemax="10.4"
               >
-                <h4>Carbohydrates (g)</h4>
+                <h4><font color="black">Carbohydrates (g)</font></h4>
               </div>
             </div>
             <div class="progress">
               <div
                 class="progress-bar"
                 role="progressbar"
-                style="width: 50%; text-align: left;"
+                style="width: 0%; text-align: left;"
                 aria-valuenow="17"
                 aria-valuemin="0"
                 aria-valuemax="21"
               >
-                <h4>Dietary Fiber (g)</h4>
+                <h4><font color="black">Dietary Fiber (g)</font></h4>
               </div>
             </div>
             <div class="progress">
               <div
                 class="progress-bar"
                 role="progressbar"
-                style="width: 50%; text-align: left;"
+                style="width: 0%; text-align: left;"
                 aria-valuenow="98"
                 aria-valuemin="0"
                 aria-valuemax="1.7"
               >
-                <h4>Sugars (g)</h4>
+                <h4><font color="black">Sugars (g)</font></h4>
               </div>
             </div>
             <div class="progress">
               <div
                 class="progress-bar"
                 role="progressbar"
-                style="width: 50%; text-align: left;"
+                style="width: 0%; text-align: left;"
                 aria-valuenow="74"
                 aria-valuemin="0"
                 aria-valuemax="378"
               >
-                <h4>Protein (g)</h4>
+                <h4><font color="black">Protein (g)</font></h4>
               </div>
             <div class="progress">
               <div
                 class="progress-bar"
                 role="progressbar"
-                style="width: 50%; text-align: left;"
+                style="width: 0%; text-align: left;"
                 aria-valuenow="62"
                 aria-valuemin="0"
                 aria-valuemax="350"
@@ -322,6 +310,31 @@
       <script>
         document.getElementById("greeting").innerHTML =
           "Hello, " + localStorage.getItem("name") + "." + " Please click an underlined link to visualize information.";
+      </script>
+      <script>
+        function populateDay() {
+        if (localStorage.getItem("day") == 1) {
+            document.getElementById("currentday").innerHTML = "Monday";
+          }
+          if (localStorage.getItem("day") == 2) {
+            document.getElementById("currentday").innerHTML = "Tuesday";
+          }
+          if (localStorage.getItem("day") == 3) {
+            document.getElementById("currentday").innerHTML = "Wednesday";
+          }
+          if (localStorage.getItem("day") == 4) {
+            document.getElementById("currentday").innerHTML = "Thursday";
+          }
+          if (localStorage.getItem("day") == 5) {
+            document.getElementById("currentday").innerHTML = "Friday";
+          }
+          if (localStorage.getItem("day") == 6) {
+            document.getElementById("currentday").innerHTML = "Saturday";
+          }
+          if (localStorage.getItem("day") == 7) {
+            document.getElementById("currentday").innerHTML = "Sunday";
+          }
+        }
       </script>
     </div>
     <script

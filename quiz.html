@@ -42,7 +42,7 @@
     </style>
   </head>
 </head>
-<body class="text-center" background="img/background.jpg">
+<body class="text-center" background="img/background.jpg" onload="populateDay();">
   <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
     <header class="masthead mb-auto">
       <div class="inner">
@@ -74,7 +74,31 @@
         </div>
       </footer>
     </div>
-
+    <script>
+        function populateDay() {
+        if (localStorage.getItem("day") == 1) {
+            document.getElementById("currentday").innerHTML = "Monday";
+          }
+          if (localStorage.getItem("day") == 2) {
+            document.getElementById("currentday").innerHTML = "Tuesday";
+          }
+          if (localStorage.getItem("day") == 3) {
+            document.getElementById("currentday").innerHTML = "Wednesday";
+          }
+          if (localStorage.getItem("day") == 4) {
+            document.getElementById("currentday").innerHTML = "Thursday";
+          }
+          if (localStorage.getItem("day") == 5) {
+            document.getElementById("currentday").innerHTML = "Friday";
+          }
+          if (localStorage.getItem("day") == 6) {
+            document.getElementById("currentday").innerHTML = "Saturday";
+          }
+          if (localStorage.getItem("day") == 7) {
+            document.getElementById("currentday").innerHTML = "Sunday";
+          }
+        }
+      </script>
     <script src="js/question.js"></script>
     <script src="js/application.js"></script>
     <script src="js/controller.js"></script>
