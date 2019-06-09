@@ -14,7 +14,7 @@ function getData() {
   fetch(
     "https://api.nutritionix.com/v1_1/search/" +
       foodName +
-      "?results=0:20&fields=item_name,brand_name,item_id,nf_calories,nf_total_fat,nf_saturated_fat,nf_trans_fatty_acid,nf_cholesterol,nf_sodium,nf_total_carbohydrate,nf_dietary_fiber,nf_sugars,nf_protein&appId=62c73137&appKey=25bf33dc3657fea53a11d052cc75c79e"
+      "?results=0:20&fields=item_name,brand_name,item_id,nf_calories,nf_total_fat,nf_saturated_fat,nf_trans_fatty_acid,nf_cholesterol,nf_sodium,nf_total_carbohydrate,nf_dietary_fiber,nf_sugars,nf_protein&appId=c384e200&appKey=05c2a9df560a5f221ce395890835678f"
   )
     .then(function(response) {
       return response.json();
